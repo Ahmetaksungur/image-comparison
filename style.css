@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.row {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+.image-comparison {
+  position: relative;
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.image-comparison-responsive {
+  height: 40rem;
+  width: 100%;
+}
+
+.image-comparison-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.comparison-image-2 {
+  width: 100%;
+  height: 100%;
+  max-width: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.comparison-image-1 {
+  height: 100%;
+  max-width: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-comparison-overlay {
+  width: 50%;
+}
+.image-comparison-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 100%;
+  height: 40px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+[data-comparison-range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: transparent;
+  width: -webkit-fill-available;
+  z-index: 2;
+  cursor: pointer;
+}
+[data-comparison-range]:focus,
+[data-comparison-range]:active {
+  border: none;
+  outline: none;
+}
+
+[data-comparison-range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: transparent;
+  border: 4px solid white;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+[data-comparison-range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 15px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  outline: none;
+}
